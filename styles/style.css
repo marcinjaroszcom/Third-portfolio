@@ -1,0 +1,436 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+header .logo, .welcome-container .welcome-text h1, .welcome-container .welcome-sign h2, .web .cover:hover p {
+  text-shadow: 0 3px 6px black;
+}
+
+.welcome-container .welcome-text h1:nth-child(3) {
+  -webkit-box-shadow: 0 3px 6px black;
+          box-shadow: 0 3px 6px black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Inconsolata', monospace;
+  background: black;
+  background-image: url("../img/background.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-size: 14px;
+}
+
+body span {
+  color: #0044FE;
+  font-size: 20px;
+}
+
+.first {
+  height: 100vh;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .logo {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  padding: 10px;
+}
+
+header .github-icon img {
+  height: 30px;
+  margin: 10px;
+}
+
+.time-line {
+  height: 155%;
+  width: 2px;
+  background: #0044FE;
+  position: absolute;
+  margin-left: 10vw;
+}
+
+.time-line.last {
+  max-height: 900px;
+}
+
+.welcome-container .welcome-text {
+  margin-left: 15vw;
+  margin-top: 5vh;
+}
+
+.welcome-container .welcome-text h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 60px;
+}
+
+.welcome-container .welcome-text h1:nth-child(1) {
+  background: #0044FE;
+  width: 155px;
+  padding: 0 20px;
+  -webkit-box-shadow: 0 3px 6px black;
+          box-shadow: 0 3px 6px black;
+}
+
+.welcome-container .welcome-text h1:nth-child(2) {
+  color: #0044FE;
+  padding-left: 20px;
+}
+
+.welcome-container .welcome-text h1:nth-child(3) {
+  border: 2px solid #0044FE;
+  padding: 0 15px;
+  width: 185px;
+}
+
+.welcome-container .welcome-sign h2 {
+  font-size: 24px;
+  margin-left: calc(15vw + 15px);
+  margin-top: 5vh;
+  width: 100px;
+  line-height: 35px;
+  font-weight: normal;
+}
+
+.welcome-container .typing::after {
+  content: '_';
+  -webkit-animation-name: blink;
+          animation-name: blink;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.welcome-container .my-photo {
+  width: 38vw;
+  max-width: 250px;
+  position: absolute;
+  bottom: 0;
+  right: 4vw;
+  opacity: 1;
+  -webkit-animation: blink 2s ease;
+          animation: blink 2s ease;
+}
+
+.welcome-container .arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.welcome-container .arrow img {
+  position: absolute;
+  bottom: 5px;
+}
+
+@-webkit-keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+h3 {
+  font-weight: normal;
+  padding: 20px 0;
+}
+
+.second section,
+.fourth section,
+.third section,
+.fifth section,
+.sixth section {
+  margin-left: 15vw;
+}
+
+.second section article,
+.fourth section article,
+.third section article,
+.fifth section article,
+.sixth section article {
+  position: relative;
+}
+
+.second section article p,
+.fourth section article p,
+.third section article p,
+.fifth section article p,
+.sixth section article p {
+  padding: 0 20px 10px 0;
+  text-indent: 20px;
+  text-align: justify;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.second section article span,
+.fourth section article span,
+.third section article span,
+.fifth section article span,
+.sixth section article span {
+  color: white;
+  -webkit-animation-name: blink;
+          animation-name: blink;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.second section article p::after,
+.fourth section article p::after,
+.third section article p::after,
+.fifth section article p::after,
+.sixth section article p::after {
+  content: '';
+  position: absolute;
+  width: 80vw;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #0044FE;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.second section article p[data-scroll='in']::after,
+.fourth section article p[data-scroll='in']::after,
+.third section article p[data-scroll='in']::after,
+.fifth section article p[data-scroll='in']::after,
+.sixth section article p[data-scroll='in']::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+.second section article p[data-scroll='in'],
+.fourth section article p[data-scroll='in'],
+.third section article p[data-scroll='in'],
+.fifth section article p[data-scroll='in'],
+.sixth section article p[data-scroll='in'] {
+  opacity: 1;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.second,
+.fourth,
+.sixth {
+  background-color: #000000c0;
+}
+
+.graphic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 30px 0;
+}
+
+.graphic img {
+  width: 50vw;
+  max-width: 300px;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.graphic img[data-scroll='in'] {
+  opacity: 1;
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+.web {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 30px 0 30px -50px;
+  position: relative;
+}
+
+.web .cover {
+  background: #000000cb;
+  position: absolute;
+  height: 100%;
+  width: 60vw;
+  max-width: 300px;
+  -webkit-transition: background 0.1s ease;
+  transition: background 0.1s ease;
+}
+
+.web .cover p {
+  color: white;
+  position: absolute;
+  left: -10vw;
+  bottom: 10px;
+  border-bottom: 2px solid white;
+  padding: 5px;
+  -webkit-transition: left 0.1s ease, opacity 1s 0.5s;
+  transition: left 0.1s ease, opacity 1s 0.5s;
+  opacity: 0;
+}
+
+.web .cover p[data-scroll='in'] {
+  opacity: 1;
+}
+
+.web img {
+  width: 60vw;
+  max-width: 300px;
+}
+
+.web .cover:hover {
+  background: #00000052;
+}
+
+.web .cover:hover p {
+  left: 0;
+}
+
+.sixth article:nth-child(4) p,
+.sixth article:nth-child(5) p {
+  margin-bottom: 50px;
+}
+
+footer {
+  text-align: right;
+  padding: 10px;
+  background: #000000bb;
+}
+
+footer span {
+  font-size: 14px;
+}
+
+@media (min-width: 1024px) {
+  header .logo {
+    font-size: 40px;
+    padding: 20px;
+  }
+  header .logo span {
+    font-size: 40px;
+  }
+  header .github-icon img {
+    height: 40px;
+    margin: 20px;
+  }
+  .welcome-container .welcome-text {
+    margin-top: 10vh;
+  }
+  .welcome-container .welcome-text h1 {
+    font-size: 100px;
+  }
+  .welcome-container .welcome-text h1:nth-child(1) {
+    width: 255px;
+  }
+  .welcome-container .welcome-text h1:nth-child(3) {
+    width: 305px;
+    margin: -150px 0 0 320px;
+  }
+  .welcome-container .welcome-sign h2 {
+    font-size: 30px;
+    margin-top: 10px;
+    width: 600px;
+  }
+  .welcome-container .my-photo {
+    width: 25vw;
+    max-width: 280px;
+  }
+  h3 {
+    font-size: 30px;
+    padding: 50px 0;
+  }
+  .second section article,
+  .fourth section article,
+  .third section article,
+  .fifth section article,
+  .sixth section article {
+    width: 50vw;
+  }
+  .second section article p,
+  .fourth section article p,
+  .third section article p,
+  .fifth section article p,
+  .sixth section article p {
+    font-size: 20px;
+  }
+  .second section article p::after,
+  .fourth section article p::after,
+  .third section article p::after,
+  .fifth section article p::after,
+  .sixth section article p::after {
+    width: 50vw;
+  }
+  .graphic {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin: 0px 5vw;
+  }
+  .web {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin: 0 5vw;
+  }
+  .web .cover p {
+    font-size: 20px;
+    left: -2vw;
+  }
+  .web-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    margin-right: 10vw;
+  }
+  .web-container .web {
+    margin: 50px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
